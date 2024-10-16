@@ -1,41 +1,31 @@
-# Student-Performance-Prediction-Model
+# Student-Performance-Prediction-Model #
 
-**Project Summary**
-The project aims to develop a model that predicts students' grades based on several factors and utilizing a number of machine learning techniques such as data preprocessing, model training and hyperparameter tuning.  
+This project aims to predict students' final grades using a variety of demographic and academic data (such as study time, prior grades, family background, and more). The problem is treated as a regression task, where we predict a continuous value (the final grade).
 
-**Data Set Overview** 
-Imported as Student Performance Dataset from UCI Machine Learning Repository
-https://archive.ics.uci.edu/dataset/320/student+performance
+## Project Overview ##
+By leveraging machine learning techniques, this project uses Python to build predictive models that estimate students' final grades based on input data. We employ a linear regression model as well as a tuned Ridge regression model to enhance performance.
 
-studytime: Students' Weekly Study Time (numeric)<br/>
-failures: Historical Occurences of Failures (numeric)<br/>
-age: Students' Age (numeric)<br/>
-Medu: Student's Mother's Education Level (numeric)<br/>
-Fedu: Student's Father's Education Level (numeric)<br/>
-famrel: Quality of Family Relationship (numeric)<br/>
-goout: Outings with Friends (numeric)<br/>
-Dalc: Alcholic Consumption on Weekdays (numeric)<br/>
-Walc: Alcoholic Consumption on Weekends (numeric)<br/>
-health: Current Health Status (numeric)<br/>
-absences: Historical Absence Record (numeric)<br/>
-G1, G2: First and Second Period Grades (numeric)<br/>
-G3: Final Grade (target variable)<br/>
+## To Run the Model ##
 
-The Data Set also includes a number of other features that are accounted for during the prediction model but listed above are the key features.<br/>
-The next section will highlight some key features of the data handling and processing within the program. 
+**1. Clone the Repository:**<br/>
+Start by cloning this repository to your local machine.
+`git clone https://github.com/your-repo/student-performance-prediction.git`
+`cd student-performance-prediction`
 
-**Phase 1: Loading Data**
+**2. Install Required Libraries:**<br/>
+Install the required Python libraries using `pip` or `conda`:
+`pip install pandas numpy scikit-learn`
 
-**Reading the Data:** Utilizing pd.read_csv, the file path can be read, alongside with sep=';' which is used to allow pandas to recognize ';' as the delimeter instead of ','. 
+**3. Loading the Dataset:**<br/>
+The dataset `student-mat.csv` should be placed in the appropriate folder. Ensure the file is located in the correct path as indicated in the script, or modify the file path in `main.py`:
+`df = pd.read_csv("data/student-mat.csv", sep=';')`
 
-**Phase 2: Data Preprocessing**
+**4. Run the Script:**<br/>
+Run the script on your preferred IDE or run it manually with the command below in the terminal. 
+`python main.py`
 
-**Missing Data Handling:** df.isnull().sum() is utilized to check for missing data within the data set. This data set has no missing data.<br/> 
-**Data Conversion:** pd.get_dummies allows for categorical data (e.g. education level) to be converted to separate binary column to be processed by the model.<br/>
-**Feature Scaling:** Using StandardScaler from the scikit library scales all numerical features so they have a mean of 0 and a standard deviation of 1, making the model training more stable and improving performance.
+These steps allow you to set up the required libraries and data set for you to run the Python script to load the data, preprocess it, train the models, and evaluate the performance. 
 
-**Phase 3: Data Splitting**
 
-**Train-Test Splitting:** This allows the model to learn from one portion of the data and be evaluated on another, helping to assess its generalization ability.
 
 
