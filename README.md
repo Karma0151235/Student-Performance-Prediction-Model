@@ -93,11 +93,11 @@ This project demonstrates the power of regression techniques in predicting stude
 
 ## Technologies Used ##
 
-**Python:** Primary programming language
-**Pandas:** Data manipulation and analysis
-**NumPy:** Numerical computing
-**scikit-learn:** Machine learning library for model building, scaling, and evaluation
-**GridSearchCV:** For hyperparameter tuning in Ridge regression
+**Python:** Primary programming language <br/>
+**Pandas:** Data manipulation and analysis <br/>
+**NumPy:** Numerical computing <br/>
+**scikit-learn:** Machine learning library for model building, scaling, and evaluation <br/>
+**GridSearchCV:** For hyperparameter tuning in Ridge regression <br/>
 
 ## References and Credits ##
 
