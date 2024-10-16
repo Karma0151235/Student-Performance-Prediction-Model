@@ -7,16 +7,16 @@ Data Set Overview:
 Imported as Student Performance Dataset from UCI Machine Learning Repository
 https://archive.ics.uci.edu/dataset/320/student+performance
 
-studytime: Weekly study time (numeric)
-failures: Number of past class failures (numeric)
-age: Age of the student (numeric)
-Medu: Mother’s education level (numeric)
-Fedu: Father’s education level (numeric)
-famrel: Quality of family relationships (numeric)
-goout: Going out with friends (numeric)
-Dalc: Workday alcohol consumption (numeric)
-Walc: Weekend alcohol consumption (numeric)
-health: Current health status (numeric)
-absences: Number of school absences (numeric)
-G1, G2: First and second period grades (numeric)
-G3: Final grade (target variable)
+studytime: Students' Weekly Study Time (numeric)<br/>
+failures: Historical Occurences of Failures (numeric)<br/>
+age: Students' Age (numeric)<br/>
+Medu: Student's Mother's Education Level (numeric)<br/>
+Fedu: Student's Father's Education Level (numeric)<br/>
+famrel: Quality of Family Relationship (numeric)<br/>
+goout: Outings with Friends (numeric)<br/>
+Dalc: Alcholic Consumption on Weekdays (numeric)<br/>
+Walc: Alcoholic Consumption on Weekends (numeric)<br/>
+health: Current Health Status (numeric)<br/>
+absences: Historical Absence Record (numeric)<br/>
+G1, G2: First and Second Period Grades (numeric)<br/>
+G3: Final Grade (target variable)<br/>
