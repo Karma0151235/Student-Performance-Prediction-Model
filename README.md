@@ -12,6 +12,7 @@ Start by cloning this repository to your local machine.<br/>
 ```python
 git clone https://github.com/your-repo/student-performance-prediction.git
 cd student-performance-prediction
+```
 
 **2. Install Required Libraries:**<br/>
 Install the required Python libraries using `pip` or `conda`:<br/>
