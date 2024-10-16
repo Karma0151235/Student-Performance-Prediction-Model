@@ -62,7 +62,7 @@ X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.2, random_
 
 **Step 4: Model Training and Evaluating**<br/>
 * Train a Linear Regression model using the training data.<br/>
-* Evaluate the model using Mean Squared Error (MSE) as the metric.
+* Evaluate the model using **Mean Squared Error (MSE)** as the metric.
 ```
 model = LinearRegression()
 model.fit(X_train, Y_train)
@@ -71,6 +71,14 @@ mse = np.mean((Y_test - Y_pred)**2)
 print(f"Mean Squared Error: {mse}")
 ```
 
+**Step 5: Tuning and Experimenting**<br/>
+Experiment with Ridge Regression to improve the performance. We use GridSearchCV to optimize the alpha hyperparameter for Ridge Regression.
+```
+param_grid = {'alpha': [0.1, 1.0, 10.0, 100.0]}
+grid_search = GridSearchCV(Ridge(), param_grid, cv=5)
+grid_search.fit(X_train, Y_train)
+print(grid_search.best_params_)
+```
 
 
 
