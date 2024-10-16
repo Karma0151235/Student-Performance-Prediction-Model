@@ -9,7 +9,7 @@ By leveraging machine learning techniques, this project uses Python to build pre
 
 **1. Clone the Repository:**<br/>
 Start by cloning this repository to your local machine.<br/>
-```python
+```
 git clone https://github.com/your-repo/student-performance-prediction.git
 cd student-performance-prediction
 ```
