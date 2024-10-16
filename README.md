@@ -46,7 +46,7 @@ print(df.head())
 **Step 2: Data Preprocessing**<br/>
 * Handle missing data and convert categorical variables into dummy variables using `pd.get_dummies()`.<br/>
 * Scale the features to standardize the input using `StandardScaler` from `scikit-learn.`<br/>
-* The target variable, **G3** (final grade), is kept separate.<br/>
+* The target variable, **G3** (final grade), is kept separate.
 ```
 df = pd.get_dummies(df, drop_first=True)
 scaler = StandardScaler()
@@ -55,18 +55,21 @@ scaled_features = scaler.fit_transform(numerical_features)
 ```
 
 **Step 3: Data Splitting**<br/>
-This phase splits the data into training and test sets, where 20% of the data is used for testing.<br/>
-`X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.2, random_state=42)`
+This phase splits the data into training and test sets, where 20% of the data is used for testing.
+```
+X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.2, random_state=42)
+```
 
 **Step 4: Model Training and Evaluating**<br/>
 * Train a Linear Regression model using the training data.<br/>
-* Evaluate the model using Mean Squared Error (MSE) as the metric.<br/>
-`model = LinearRegression()
+* Evaluate the model using Mean Squared Error (MSE) as the metric.
+```
+model = LinearRegression()
 model.fit(X_train, Y_train)
 Y_pred = model.predict(X_test)
 mse = np.mean((Y_test - Y_pred)**2)
-print(f"Mean Squared Error: {mse}")`
-
+print(f"Mean Squared Error: {mse}")
+```
 
 
 
