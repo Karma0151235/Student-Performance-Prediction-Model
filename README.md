@@ -9,20 +9,24 @@ By leveraging machine learning techniques, this project uses Python to build pre
 
 **1. Clone the Repository:**<br/>
 Start by cloning this repository to your local machine.<br/>
-`git clone https://github.com/your-repo/student-performance-prediction.git`
-`cd student-performance-prediction`
+```python
+git clone https://github.com/your-repo/student-performance-prediction.git
+cd student-performance-prediction
 
 **2. Install Required Libraries:**<br/>
 Install the required Python libraries using `pip` or `conda`:<br/>
-`pip install pandas numpy scikit-learn`
+```python
+pip install pandas numpy scikit-learn
 
 **3. Loading the Dataset:**<br/>
 The dataset `student-mat.csv` should be placed in the appropriate folder. Ensure the file is located in the correct path as indicated in the script, or modify the file path in `main.py`:<br/>
-`df = pd.read_csv("student-mat.csv", sep=';')`
+```python
+df = pd.read_csv("student-mat.csv", sep=';')
 
 **4. Run the Script:**<br/>
 Run the script on your preferred IDE or run it manually with the command below in the terminal.<br/>
-`python main.py`
+```python
+python main.py
 
 These steps allow you to set up the required libraries and data set for you to run the Python script to load the data, preprocess it, train the models, and evaluate the performance.
 
