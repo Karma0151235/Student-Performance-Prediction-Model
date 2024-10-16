@@ -36,14 +36,14 @@ These steps allow you to set up the required libraries and data set for you to r
 
 ## Understanding the Steps ##
 
-**Step 1: Data Loading**<br/>
+### Step 1: Data Loading ###
 * The purpose of this step is to load the data set using pandas, and viewing the first 5 rows of the unaltered data set.<br/>
 ```
 df = pd.read_csv("data/student-mat.csv", sep=';')
 print(df.head())
 ```
 
-**Step 2: Data Preprocessing**<br/>
+### Step 2: Data Preprocessing ###
 * Handle missing data and convert categorical variables into dummy variables using `pd.get_dummies()`.<br/>
 * Scale the features to standardize the input using `StandardScaler` from `scikit-learn.`<br/>
 * The target variable, **G3** (final grade), is kept separate.
@@ -54,13 +54,13 @@ numerical_features = df.drop('G3', axis=1)
 scaled_features = scaler.fit_transform(numerical_features)
 ```
 
-**Step 3: Data Splitting**<br/>
+### Step 3: Data Splitting ###
 * This phase splits the data into training and test sets, where 20% of the data is used for testing.
 ```
 X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.2, random_state=42)
 ```
 
-**Step 4: Model Training and Evaluating**<br/>
+### Step 4: Model Training and Evaluating ###
 * Train a Linear Regression model using the training data.<br/>
 * Evaluate the model using **Mean Squared Error (MSE)** as the metric.
 ```
@@ -71,7 +71,7 @@ mse = np.mean((Y_test - Y_pred)**2)
 print(f"Mean Squared Error: {mse}")
 ```
 
-**Step 5: Tuning and Experimenting**<br/>
+### Step 5: Tuning and Experimenting ###
 * Experiment with Ridge Regression to improve the performance. We use GridSearchCV to optimize the alpha hyperparameter for Ridge Regression.
 ```
 param_grid = {'alpha': [0.1, 1.0, 10.0, 100.0]}
@@ -86,6 +86,24 @@ print(grid_search.best_params_)
 * **Data Preprocessing:** Categorical data like family background and school were transformed into dummy variables, allowing the model to process them as numerical inputs. <br/>
 * **Scaling:** Numerical features were standardized, ensuring that features with different scales (e.g., study time vs. previous grades) don't affect the model disproportionately. <br/>
 * **Evaluation:** Using MSE as a metric, we assess how far the predicted final grades deviate from the actual grades. <br/>
+
+## Conclusion ##
+
+This project demonstrates the power of regression techniques in predicting students' academic performance. By preprocessing data, splitting it into training and test sets, and training both Linear and Ridge Regression models, we achieve a predictive model that can estimate student grades based on input features. While the current model provides a basic prediction, future work could involve adding more advanced models or fine-tuning for better performance.
+
+## Technologies Used ##
+
+**Python:** Primary programming language
+**Pandas:** Data manipulation and analysis
+**NumPy:** Numerical computing
+**scikit-learn:** Machine learning library for model building, scaling, and evaluation
+**GridSearchCV:** For hyperparameter tuning in Ridge regression
+
+## References and Credits ##
+
+**Author:** Karma0151235 <br/> 
+**Dataset Imported From:** https://archive.ics.uci.edu/dataset/320/student+performance 
+
 
 
 
