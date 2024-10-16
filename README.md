@@ -16,18 +16,21 @@ cd student-performance-prediction
 
 **2. Install Required Libraries:**<br/>
 Install the required Python libraries using `pip` or `conda`:<br/>
-```python
+```
 pip install pandas numpy scikit-learn
+```
 
 **3. Loading the Dataset:**<br/>
 The dataset `student-mat.csv` should be placed in the appropriate folder. Ensure the file is located in the correct path as indicated in the script, or modify the file path in `main.py`:<br/>
-```python
+```
 df = pd.read_csv("student-mat.csv", sep=';')
+```
 
 **4. Run the Script:**<br/>
 Run the script on your preferred IDE or run it manually with the command below in the terminal.<br/>
-```python
+```
 python main.py
+```
 
 These steps allow you to set up the required libraries and data set for you to run the Python script to load the data, preprocess it, train the models, and evaluate the performance.
 
@@ -35,17 +38,21 @@ These steps allow you to set up the required libraries and data set for you to r
 
 **Step 1: Data Loading**<br/>
 The purpose of this step is to load the data set using pandas, and viewing the first 5 rows of the unaltered data set.<br/>
-`df = pd.read_csv("data/student-mat.csv", sep=';')`<br/>
-`print(df.head())`
+```
+df = pd.read_csv("data/student-mat.csv", sep=';')
+print(df.head())
+```
 
 **Step 2: Data Preprocessing**<br/>
 * Handle missing data and convert categorical variables into dummy variables using `pd.get_dummies()`.<br/>
 * Scale the features to standardize the input using `StandardScaler` from `scikit-learn.`<br/>
 * The target variable, **G3** (final grade), is kept separate.<br/>
-`df = pd.get_dummies(df, drop_first=True)`<br/>
-`scaler = StandardScaler()`<br/>
-`numerical_features = df.drop('G3', axis=1)`<br/>
-`scaled_features = scaler.fit_transform(numerical_features)`
+```
+df = pd.get_dummies(df, drop_first=True)
+scaler = StandardScaler()
+numerical_features = df.drop('G3', axis=1)
+scaled_features = scaler.fit_transform(numerical_features)
+```
 
 **Step 3: Data Splitting**<br/>
 This phase splits the data into training and test sets, where 20% of the data is used for testing.<br/>
